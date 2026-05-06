@@ -7,8 +7,8 @@ from app.errors import (
 
 
 class Cafe:
-    def __init__(self, cafe_name: str) -> None:
-        self.cafe_name = cafe_name
+    def __init__(self, name: str) -> None:
+        self.name = name
 
     def visit_cafe(self, visitor: dict) -> str:
         if "vaccine" not in visitor:
@@ -20,4 +20,4 @@ class Cafe:
         if visitor["wearing_a_mask"] is False:
             raise NotWearingMaskError("Person is not wearing a mask!")
 
-        return f"Welcome to {self.cafe_name}"
+        return f"Welcome to {self.name}"
